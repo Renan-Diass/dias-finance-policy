@@ -10,7 +10,7 @@ Atualizado em **15/10/2026**, fuso `America/Sao_Paulo`.
 - O backend atual apenas confirma a conexão com o WhatsApp; não há interpretação por IA nem registro de despesas por texto habilitados.
 - A exclusão de dados é solicitada pelo contato público e tratada manualmente; não há callback automático implementado.
 - O teste de exemplo Meta → webhook AWS foi confirmado; mensagem real de ida e volta e publicação do app Meta continuam pendentes de validação.
-- Conteúdo estático preparado e conferido localmente. Presença dos arquivos no GitHub não confirma que o GitHub Pages foi ativado.
+- Conteúdo enviado ao GitHub por commit e push. GitHub Pages ativado em main/raiz, com HTTPS obrigatório; o agente confirmou HTTP 200 e conteúdo esperado nas três URLs públicas em 15/10/2026. Publicação do app Meta e teste real de mensagens continuam pendentes.
 
 ## Arquivos
 
@@ -24,13 +24,13 @@ Atualizado em **15/10/2026**, fuso `America/Sao_Paulo`.
 
 No repositório, abrir **Settings → Pages → Build and deployment** e selecionar **Deploy from a branch**, branch **main**, pasta **/(root)**, e salvar. Aguardar o deploy e verificar acesso HTTPS sem login.
 
-URLs esperadas após publicação, ainda não verificadas:
+URLs públicas verificadas com HTTP 200:
 
 - https://renan-diass.github.io/dias-finance-policy/
 - https://renan-diass.github.io/dias-finance-policy/privacidade.html
 - https://renan-diass.github.io/dias-finance-policy/exclusao.html
 
-Usar as duas últimas URLs nos campos correspondentes da Meta somente depois de conferir o acesso público. Aprovação/publicação do app depende também dos demais requisitos apresentados pela conta.
+Usar as duas últimas URLs nos campos de Política de Privacidade e URL de instruções de exclusão de dados da Meta; manter a modalidade de instruções, pois não há callback automático de exclusão. Aprovação/publicação do app depende também dos demais requisitos apresentados pela conta.
 
 ## Manutenção
 
