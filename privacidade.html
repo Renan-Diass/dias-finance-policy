@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Como o projeto trata os dados necessários à conexão pelo WhatsApp."
+    />
+    <meta name="color-scheme" content="light" />
+    <title>Política de Privacidade | Dias Finance</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+    <header class="header">
+      <a class="brand" href="index.html"
+        ><span class="mark" aria-hidden="true">DF</span
+        ><span>Dias Finance<small>Agente Financeiro Pessoal</small></span></a
+      >
+      <nav aria-label="Navegação principal">
+        <a href="index.html">Projeto</a>
+        <a href="privacidade.html" aria-current="page">Privacidade</a>
+        <a href="exclusao.html">Exclusão de dados</a>
+      </nav>
+    </header>
+    <main id="conteudo">
+      <p class="eyebrow">INFORMAÇÕES DO PROJETO</p>
+      <h1>Política de Privacidade</h1>
+      <p class="lead">Como o projeto trata os dados necessários à conexão pelo WhatsApp.</p>
+      <article>
+        <p>Atualizado em 15 de outubro de 2026.</p>
+        <h2>Responsável e contato</h2>
+        <p>
+          O Agente Financeiro Pessoal é um projeto pessoal identificado publicamente como
+          <strong>Dias Finance</strong>, destinado ao uso de seu proprietário pelo WhatsApp. O
+          projeto não está aberto ao cadastro do público geral.
+        </p>
+        <p>
+          Contato para dúvidas sobre dados pessoais e solicitações de exclusão:
+          <strong>renanalbino.dias@gmail.com</strong>.
+        </p>
+        <h2>Funcionamento atual</h2>
+        <p>
+          O aplicativo utiliza a WhatsApp Cloud API oficial para receber eventos de mensagens,
+          verificar sua autenticidade e responder ao remetente autorizado. Neste estágio, a resposta
+          automática apenas confirma a conexão. O registro de despesas por mensagens, consultas
+          financeiras, relatórios automáticos e interpretação por inteligência artificial ainda não
+          estão habilitados no fluxo WhatsApp.
+        </p>
+        <h2>Dados tratados e finalidades</h2>
+        <p>
+          Os eventos recebidos podem conter número/identificador do remetente, identificador do
+          número associado ao aplicativo, ID da mensagem, data e horário, texto enviado e
+          informações técnicas da entrega.
+        </p>
+        <p>
+          O aplicativo utiliza os dados necessários para verificar a origem do evento, autorizar o
+          único usuário, transportar a mensagem ao processador, preparar a resposta e evitar
+          processamento repetido. Dados de remetentes não autorizados são examinados para aplicar o
+          filtro de acesso e não são encaminhados pelo código do projeto à fila de processamento.
+        </p>
+        <p>
+          Mensagens autorizadas podem transitar temporariamente na fila com seu texto e
+          identificadores. O controle persistente de processamento mantém identificadores derivados
+          da mensagem, estado, contadores de uso, tentativas e, quando disponível, ID da resposta ou
+          código de erro. Esse controle não precisa armazenar o texto original ou o telefone.
+        </p>
+        <p>
+          Dados técnicos de execução também podem ser mantidos para diagnóstico e segurança. O
+          projeto não solicita senhas bancárias, dados de cartões, documentos de identidade ou
+          códigos de autenticação. Esses dados não devem ser enviados à conversa.
+        </p>
+        <h2>Serviços envolvidos</h2>
+        <p>
+          A Meta/WhatsApp fornece a infraestrutura de mensagens, sujeita às suas próprias políticas.
+          A AWS hospeda o backend, as filas e o armazenamento do projeto na região São Paulo
+          (<code>sa-east-1</code>). Essa escolha de região não determina a localização de todo o
+          tratamento realizado pela Meta ou por outros fornecedores.
+        </p>
+        <p>
+          As páginas informativas de privacidade e exclusão são disponibilizadas pelo GitHub Pages.
+          O acesso a essas páginas envolve o tratamento de dados técnicos pelo GitHub, conforme sua
+          <a
+            href="https://docs.github.com/pt/site-policy/privacy-policies/github-general-privacy-statement"
+            >declaração de privacidade</a
+          >. As páginas preparadas pelo projeto não incluem formulário de coleta, cookies próprios
+          de rastreamento ou ferramentas de publicidade.
+        </p>
+        <p>
+          O aplicativo não realiza chamadas à OpenAI ou a outros provedores de modelos de IA nesta
+          versão. Se esse funcionamento mudar, esta política deverá ser revisada antes da ativação
+          correspondente.
+        </p>
+        <p>
+          O responsável não utiliza o conteúdo das mensagens para publicidade nem o vende a
+          anunciantes. Os dados são utilizados na operação e manutenção do projeto e nas
+          solicitações do titular.
+        </p>
+        <h2>Armazenamento e retenção</h2>
+        <p>
+          Uma mensagem processada com sucesso é removida da fila pelo fluxo de consumo. A fila
+          principal está configurada com retenção máxima de quatro dias; a fila de falhas, com
+          quatorze dias, caso uma mensagem seja encaminhada para ela. Esses prazos não se aplicam
+          automaticamente a outros armazenamentos.
+        </p>
+        <p>
+          Os controles de processamento no DynamoDB não possuem expiração automática nesta versão,
+          para impedir reprocessamento de eventos antigos. A aplicação ainda não possui limpeza
+          periódica automatizada desses registros ou uma rotina de eliminação automática acionada
+          por conversa. A retenção e remoção de logs exigem administração separada; não há prazo
+          automático de sete dias confirmado na infraestrutura atual.
+        </p>
+        <p>
+          As solicitações de exclusão são recebidas pelo canal indicado abaixo e tratadas
+          manualmente pelo responsável, após verificação de titularidade. A exclusão no projeto não
+          apaga mensagens ou registros mantidos separadamente pelo WhatsApp, pela Meta ou pelo
+          próprio usuário.
+        </p>
+        <h2>Solicitações sobre seus dados</h2>
+        <p>
+          Para solicitar esclarecimentos, acesso, correção ou exclusão de dados associados ao
+          projeto, escreva para <strong>renanalbino.dias@gmail.com</strong>, informando o assunto e
+          o número WhatsApp relacionado. Informe apenas o necessário para localizar a solicitação;
+          não envie credenciais ou documentos sensíveis.
+        </p>
+        <p>
+          O responsável poderá confirmar a titularidade pelo número relacionado antes de executar
+          ações sobre dados. O procedimento está descrito nas
+          <a href="exclusao.html">Instruções para exclusão de dados</a>.
+        </p>
+        <h2>Alterações</h2>
+        <p>
+          O texto será revisto quando o funcionamento do projeto mudar. A data no início identifica
+          a versão apresentada. Esta política descreve o projeto; não substitui as políticas dos
+          serviços usados para transmitir ou hospedar as mensagens.
+        </p>
+      </article>
+    </main>
+    <footer>
+      <p>Dias Finance · Projeto pessoal em desenvolvimento</p>
+      <a href="mailto:renanalbino.dias@gmail.com">renanalbino.dias@gmail.com</a>
+    </footer>
+  </body>
+</html>
