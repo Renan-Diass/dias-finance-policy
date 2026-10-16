@@ -32,14 +32,15 @@
       </p>
       <article>
         <p>
-          Atualizado em 16 de outubro de 2026, no fuso America/Sao_Paulo. Esta versão descreve a
-          conexão e o registro de despesas por texto para o proprietário.
+          Atualizado em 16 de outubro de 2026, no fuso America/Sao_Paulo. Esta versão descreve o
+          piloto de cadastro, registro de despesas, categorias e resumos pelo WhatsApp.
         </p>
         <h2>Responsável e contato</h2>
         <p>
-          O Agente Financeiro Pessoal é um projeto pessoal identificado publicamente como
-          <strong>Dias Finance</strong>, destinado ao uso de seu proprietário pelo WhatsApp. O
-          projeto não está aberto ao cadastro do público geral.
+          O Agente Financeiro Pessoal é um projeto em desenvolvimento identificado publicamente como
+          <strong>Dias Finance</strong>, disponibilizado pelo WhatsApp em um piloto com o
+          proprietário e até cinco outros participantes. O cadastro é aberto até preencher essas
+          cinco vagas; a pessoa precisa informar nome e e-mail antes de acessar funções financeiras.
         </p>
         <p>
           Contato para dúvidas sobre dados pessoais e solicitações de exclusão:
@@ -48,12 +49,14 @@
         <h2>Funcionamento atual</h2>
         <p>
           O aplicativo utiliza a WhatsApp Cloud API oficial para receber eventos de mensagens,
-          verificar sua autenticidade e responder ao remetente autorizado. A versão de registro
-          interpreta descrições claras de despesas por regras locais, prepara uma confirmação com
-          valor, descrição, categoria e data, e solicita esclarecimento quando faltar valor ou
-          categoria. O acesso permanece restrito ao proprietário. Consultas financeiras
-          conversacionais, relatórios automáticos e interpretação por inteligência artificial ainda
-          não estão habilitados.
+          verificar sua autenticidade e responder ao remetente identificado pelo evento autenticado
+          da Meta. O cadastro e o acesso são vinculados ao identificador desse WhatsApp. A versão de
+          registro interpreta descrições claras de despesas por regras locais, prepara uma
+          confirmação com valor, descrição, categoria e data, e solicita esclarecimento quando
+          faltar valor ou categoria. Cada participante acessa somente seus registros. Também é
+          possível criar categorias e consultar os totais registrados por categoria no mês atual.
+          Não há integração bancária, movimentação financeira, relatórios automáticos ou
+          interpretação por inteligência artificial habilitados.
         </p>
         <h2>Dados tratados e finalidades</h2>
         <p>
@@ -62,22 +65,28 @@
           informações técnicas da entrega.
         </p>
         <p>
-          O aplicativo utiliza os dados necessários para verificar a origem do evento, autorizar o
-          único usuário, transportar a mensagem ao processador, preparar a resposta e evitar
-          processamento repetido. Dados de remetentes não autorizados são examinados para aplicar o
-          filtro de acesso e não são encaminhados pelo código do projeto à fila de processamento.
+          O aplicativo utiliza os dados necessários para verificar a origem do evento, identificar e
+          autorizar o participante, transportar a mensagem ao processador, preparar a resposta e
+          evitar processamento repetido. Textos de remetentes ainda não cadastrados também transitam
+          na fila para conduzir o cadastro ou informar que as vagas acabaram. Antes de o cadastro
+          ser concluído, esses remetentes não podem registrar despesas ou consultar dados
+          financeiros. Identificadores de outra conta fornecidos no texto não concedem acesso a ela.
         </p>
         <p>
           Mensagens autorizadas podem transitar temporariamente na fila com seu texto e
           identificadores. O controle persistente de processamento mantém identificadores derivados
           da mensagem, estado, contadores de uso, tentativas e, quando disponível, ID da resposta ou
           código de erro. Esse controle de transporte não precisa armazenar o texto original ou o
-          telefone. Para o registro financeiro, são armazenados perfil do proprietário e seu
-          identificador autorizado, categorias, despesas em centavos, descrição, data, origem e
-          identificadores das transações. A resposta preparada e o resultado do processamento são
-          persistidos para que reentregas não dupliquem despesas. Esclarecimentos pendentes
-          armazenam somente o rascunho necessário, incluindo descrição, valor, categoria, data e
-          prazo de validade.
+          telefone. Para o registro financeiro, são armazenados perfil de cada participante com
+          nome, e-mail e identificador do WhatsApp, categorias, despesas em centavos, descrição,
+          data, origem e identificadores das transações. O nome e o e-mail são usados para o
+          cadastro, identificação e atendimento de solicitações relacionadas ao serviço, sem uso
+          para mensagens promocionais. O e-mail é validado apenas pelo formato, sem confirmação de
+          titularidade por link, e não funciona como senha ou chave de acesso. Etapas e respostas do
+          cadastro são armazenadas, assim como o contador agregado de vagas do piloto. A resposta
+          preparada e o resultado do processamento são persistidos para que reentregas não dupliquem
+          despesas. Esclarecimentos pendentes armazenam somente o rascunho necessário, incluindo
+          descrição, valor, categoria, data e prazo de validade.
         </p>
         <p>
           Dados técnicos de execução também podem ser mantidos para diagnóstico e segurança. O
@@ -119,21 +128,23 @@
         </p>
         <p>
           Os controles de processamento no DynamoDB não possuem expiração automática nesta versão,
-          para impedir reprocessamento de eventos antigos. Despesas, categorias, perfil e respostas
-          processadas também não possuem expiração automática. Uma pendência deixa de ser aceita
-          após 30 minutos; esse prazo é lógico e não significa remoção física automática. O contexto
-          é substituído ou limpo quando novas mensagens são processadas. A aplicação ainda não
-          possui limpeza periódica automatizada desses registros ou uma rotina de eliminação
-          automática acionada por conversa. O comando cancelar descarta somente o rascunho pendente;
-          não apaga despesas já registradas ou o histórico técnico de respostas. A retenção e
-          remoção de logs exigem administração separada; não há prazo automático de sete dias
-          confirmado na infraestrutura atual.
+          para impedir reprocessamento de eventos antigos. Despesas, categorias, perfil, respostas
+          processadas, etapas de cadastro e cadastros incompletos também não possuem expiração
+          automática. Uma pendência deixa de ser aceita após 30 minutos; esse prazo é lógico e não
+          significa remoção física automática. O contexto é substituído ou limpo quando novas
+          mensagens são processadas. A aplicação ainda não possui limpeza periódica automatizada
+          desses registros ou uma rotina de eliminação automática acionada por conversa. O comando
+          cancelar descarta somente o rascunho pendente; não apaga despesas já registradas ou o
+          histórico técnico de respostas. A retenção e remoção de logs exigem administração
+          separada; não há prazo automático de sete dias confirmado na infraestrutura atual.
         </p>
         <p>
           As solicitações de exclusão são recebidas pelo canal indicado abaixo e tratadas
-          manualmente pelo responsável, após verificação de titularidade. A exclusão no projeto não
-          apaga mensagens ou registros mantidos separadamente pelo WhatsApp, pela Meta ou pelo
-          próprio usuário.
+          manualmente pelo responsável, após verificação de titularidade. Os dados de um
+          participante não são exibidos a outros participantes pelo bot. O responsável pelo projeto
+          pode administrar os dados do backend para manutenção e atendimento de solicitações. A
+          exclusão no projeto não apaga mensagens ou registros mantidos separadamente pelo WhatsApp,
+          pela Meta ou pelo próprio usuário.
         </p>
         <h2>Solicitações sobre seus dados</h2>
         <p>

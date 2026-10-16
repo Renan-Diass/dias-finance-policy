@@ -12,6 +12,12 @@ Atualizado em **16/10/2026**, fuso `America/Sao_Paulo`.
 - App Meta publicado e ida e volta de conexão confirmada pelo proprietário em 15/10/2026; teste real de despesas depende do incremento.
 - Conteúdo enviado ao GitHub por commit e push. GitHub Pages ativado em main/raiz, com HTTPS obrigatório; o agente confirmou HTTP 200 e conteúdo esperado nas três URLs públicas em 15/10/2026. A revisão de 16/10 atualiza o escopo de tratamento; o agente confirmou HTTP 200 e novo conteúdo nas três URLs após o push.
 
+## Piloto de cinco amigos — 16/10/2026
+
+Páginas revisadas para o piloto com proprietário e até cinco amigos, cadastro aberto com nome/e-mail antes do uso financeiro, categorias por participante e resumos do mês. A identificação do acesso vem do WhatsApp; e-mail é validado só por formato e não é credencial. Etapas/respostas de cadastro podem permanecer armazenadas mesmo sem conclusão; exclusão é solicitada ao contato público e administrada manualmente. Cadastros, despesas e categorias não devem ser copiados para este repositório.
+
+Deploy do piloto em preparação no projeto privado; verificar conclusão lá antes de informar acesso ampliado ativo. Textos estáticos são publicados antecipadamente para descrever o novo tratamento antes da ativação. As notas anteriores são histórico do incremento de despesas para proprietário.
+
 ## Arquivos
 
 - `index.html`: apresentação do projeto e navegação.
