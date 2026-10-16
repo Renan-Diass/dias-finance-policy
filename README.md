@@ -26,9 +26,11 @@ Relatório mensal opcional: autorização por participante, fechamento anterior 
 
 ## Interpretação assistida por IA — 16/10/2026
 
-Páginas revisadas para descrever OpenRouter e OpenAI quando a interpretação estiver habilitada: texto atual, categorias e rascunho necessário, sem acrescentar perfil ou histórico completo à chamada; validação e cálculos continuam no backend. Texto e categorias podem conter dados pessoais. Roteamento exige ZDR/coleta negada, mas não promete ausência de metadados de cobrança/segurança dos fornecedores. Resultados estruturados e controles de uso no backend não possuem TTL; exclusão integral segue manual e considera esses controles.
+Páginas revisadas para descrever OpenRouter e o modelo OpenAI pela rota Microsoft/Azure quando a interpretação estiver habilitada: texto atual, categorias e rascunho necessário, sem acrescentar perfil ou histórico completo à chamada; validação e cálculos continuam no backend. Texto e categorias podem conter dados pessoais. Roteamento exige ZDR/coleta negada, mas não promete ausência de metadados de cobrança/segurança dos fornecedores. Resultados estruturados e controles de uso no backend não possuem TTL; exclusão integral segue manual e considera esses controles.
 
 Publicação antecipada das informações antes da ativação. Chave, avaliação do modelo real e ativação ainda pendentes no projeto privado. Nenhum dado financeiro ou credencial foi copiado. As notas anteriores descrevem o histórico dos incrementos.
+
+A avaliação do projeto privado detectou que a rota direta OpenAI não atendia à exigência ZDR. Rota fixada em Azure (Microsoft) para o mesmo modelo OpenAI, preservando ZDR/coleta negada e teto de preço; páginas ajustadas antes da ativação. Credencial substituída manualmente pelo responsável; nenhuma chave foi copiada para este repositório. Avaliação completa e deploy ainda precisam de confirmação no projeto privado.
 
 ## Arquivos
 

@@ -135,13 +135,13 @@
         <h2>Interpretação assistida por inteligência artificial</h2>
         <p>
           Quando habilitada pelo responsável, a IA auxilia na compreensão de mensagens que as regras
-          locais não resolvem, por meio do OpenRouter com o modelo openai/gpt-6-luna e provedor
-          OpenAI. Podem ser enviados o texto atual, a data local, nomes/identificadores/estado de
-          categorias do participante e eventual rascunho de despesa pendente. Nome, e-mail e
-          identificador do WhatsApp do perfil, identificadores internos de usuário/mensagem e
-          histórico financeiro completo não são acrescentados à chamada. O próprio texto, observação
-          ou nome de categoria pode conter dados pessoais; não envie informações sensíveis ou
-          credenciais.
+          locais não resolvem, por meio do OpenRouter com o modelo openai/gpt-6-luna da OpenAI,
+          executado pela rota Azure da Microsoft. Podem ser enviados o texto atual, a data local,
+          nomes/identificadores/estado de categorias do participante e eventual rascunho de despesa
+          pendente. Nome, e-mail e identificador do WhatsApp do perfil, identificadores internos de
+          usuário/mensagem e histórico financeiro completo não são acrescentados à chamada. O
+          próprio texto, observação ou nome de categoria pode conter dados pessoais; não envie
+          informações sensíveis ou credenciais.
         </p>
         <p>
           A IA propõe uma ação estruturada. Valores, datas, categorias, autorização, totais e
@@ -157,11 +157,12 @@
           projeto não habilita registro próprio de prompts nem usa essas mensagens para treinar um
           modelo. Essas configurações não eliminam necessariamente metadados de cobrança, segurança
           e operação mantidos pelos fornecedores conforme suas políticas. O tratamento do OpenRouter
-          e da OpenAI pode ocorrer fora do Brasil, independentemente da região AWS. Consulte a
-          <a href="https://openrouter.ai/privacy">política do OpenRouter</a>, sua
-          <a href="https://openrouter.ai/docs/guides/features/zdr">documentação ZDR</a> e os
-          <a href="https://developers.openai.com/api/docs/guides/your-data"
-            >controles de dados da API OpenAI</a
+          e da Microsoft/Azure pode ocorrer fora do Brasil, independentemente da região AWS.
+          Consulte a <a href="https://openrouter.ai/privacy">política do OpenRouter</a>, sua
+          <a href="https://openrouter.ai/docs/guides/features/zdr">documentação ZDR</a> e a
+          <a
+            href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/data-privacy?view=foundry-classic"
+            >documentação de privacidade dos modelos no Azure</a
           >.
         </p>
         <p>
