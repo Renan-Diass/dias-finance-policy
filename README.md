@@ -7,10 +7,10 @@ Páginas públicas de privacidade e exclusão de dados do projeto Agente Finance
 Atualizado em **16/10/2026**, fuso `America/Sao_Paulo`.
 
 - O responsável escolheu a identificação pública **Dias Finance** e o contato exibido nas páginas.
-- Páginas revisadas para o incremento de despesas por texto: valores/descrições/categorias/datas, confirmações e contexto persistido. O deploy do incremento está sendo validado no projeto privado. Sem chamadas IA, integração bancária ou movimentação financeira.
+- Páginas revisadas para o incremento de despesas por texto: valores/descrições/categorias/datas, confirmações e contexto persistido. Incremento implantado em 16/10/2026; teste real de despesa ainda pendente. Sem chamadas IA, integração bancária ou movimentação financeira.
 - A exclusão de dados é solicitada pelo contato público e tratada manualmente; não há callback automático implementado.
 - App Meta publicado e ida e volta de conexão confirmada pelo proprietário em 15/10/2026; teste real de despesas depende do incremento.
-- Conteúdo enviado ao GitHub por commit e push. GitHub Pages ativado em main/raiz, com HTTPS obrigatório; o agente confirmou HTTP 200 e conteúdo esperado nas três URLs públicas em 15/10/2026. A revisão de 16/10 atualiza o escopo de tratamento; verificar o novo conteúdo publicado após o push.
+- Conteúdo enviado ao GitHub por commit e push. GitHub Pages ativado em main/raiz, com HTTPS obrigatório; o agente confirmou HTTP 200 e conteúdo esperado nas três URLs públicas em 15/10/2026. A revisão de 16/10 atualiza o escopo de tratamento; o agente confirmou HTTP 200 e novo conteúdo nas três URLs após o push.
 
 ## Arquivos
 
