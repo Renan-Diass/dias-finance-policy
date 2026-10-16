@@ -33,8 +33,8 @@
       <article>
         <p>
           Atualizado em 16 de outubro de 2026, no fuso America/Sao_Paulo. Esta versão descreve o
-          piloto de cadastro, despesas com observações, categorias, correções, consultas e
-          relatórios pelo WhatsApp.
+          piloto de cadastro, despesas com observações, categorias, correções, consultas, relatórios
+          e interpretação assistida por IA quando habilitada.
         </p>
         <h2>Responsável e contato</h2>
         <p>
@@ -60,8 +60,9 @@
           criar, renomear, arquivar, reativar e excluir categorias, corrigir ou excluir despesas dos
           totais e consultar períodos, categorias e detalhamentos. Exclusões e correções pedem
           confirmação. Ao excluir categoria com despesas, o usuário escolhe outra categoria para
-          receber o histórico, preservando os valores. Não há integração bancária, movimentação
-          financeira ou interpretação por inteligência artificial habilitados.
+          receber o histórico, preservando os valores. Não há integração bancária nem movimentação
+          financeira. A interpretação assistida por IA, descrita abaixo, depende de habilitação pelo
+          responsável; a aplicação também funciona com regras locais.
         </p>
         <h2>Relatório mensal opcional</h2>
         <p>
@@ -131,10 +132,44 @@
           >. As páginas preparadas pelo projeto não incluem formulário de coleta, cookies próprios
           de rastreamento ou ferramentas de publicidade.
         </p>
+        <h2>Interpretação assistida por inteligência artificial</h2>
         <p>
-          O aplicativo não realiza chamadas à OpenAI ou a outros provedores de modelos de IA nesta
-          versão. Se esse funcionamento mudar, esta política deverá ser revisada antes da ativação
-          correspondente.
+          Quando habilitada pelo responsável, a IA auxilia na compreensão de mensagens que as regras
+          locais não resolvem, por meio do OpenRouter com o modelo openai/gpt-6-luna e provedor
+          OpenAI. Podem ser enviados o texto atual, a data local, nomes/identificadores/estado de
+          categorias do participante e eventual rascunho de despesa pendente. Nome, e-mail e
+          identificador do WhatsApp do perfil, identificadores internos de usuário/mensagem e
+          histórico financeiro completo não são acrescentados à chamada. O próprio texto, observação
+          ou nome de categoria pode conter dados pessoais; não envie informações sensíveis ou
+          credenciais.
+        </p>
+        <p>
+          A IA propõe uma ação estruturada. Valores, datas, categorias, autorização, totais e
+          persistência são validados ou calculados pelo backend. Alterações e exclusões de despesas
+          continuam exigindo prévia e confirmação explícita. Respostas podem conter erros de
+          interpretação; confira a confirmação do registro e utilize os comandos de correção quando
+          necessário. Falha ou limite de uso levam às regras locais ou a um pedido de
+          esclarecimento.
+        </p>
+        <p>
+          O roteamento solicita provedor com Zero Data Retention (ZDR), coleta de dados negada e
+          armazenamento de resposta desabilitado; não permite troca automática de provedor. O
+          projeto não habilita registro próprio de prompts nem usa essas mensagens para treinar um
+          modelo. Essas configurações não eliminam necessariamente metadados de cobrança, segurança
+          e operação mantidos pelos fornecedores conforme suas políticas. O tratamento do OpenRouter
+          e da OpenAI pode ocorrer fora do Brasil, independentemente da região AWS. Consulte a
+          <a href="https://openrouter.ai/privacy">política do OpenRouter</a>, sua
+          <a href="https://openrouter.ai/docs/guides/features/zdr">documentação ZDR</a> e os
+          <a href="https://developers.openai.com/api/docs/guides/your-data"
+            >controles de dados da API OpenAI</a
+          >.
+        </p>
+        <p>
+          Para limitar custos e evitar novas chamadas por reentrega, o backend mantém hashes de
+          correlação/contexto, reserva de uso, estado e resultado estruturado ou falha da
+          interpretação. O resultado pode incluir descrição, observação, categoria, data, valor
+          proposto ou resposta social. Esses controles não têm expiração automática e precisam ser
+          considerados em solicitações de exclusão, juntamente com os demais dados do projeto.
         </p>
         <p>
           O responsável não utiliza o conteúdo das mensagens para publicidade nem o vende a
@@ -172,7 +207,8 @@
           participante não são exibidos a outros participantes pelo bot. O responsável pelo projeto
           pode administrar os dados do backend para manutenção e atendimento de solicitações. A
           exclusão no projeto não apaga mensagens ou registros mantidos separadamente pelo WhatsApp,
-          pela Meta ou pelo próprio usuário.
+          pela Meta, pelo próprio usuário ou pelos fornecedores de IA, sujeitos aos respectivos
+          canais e políticas.
         </p>
         <h2>Solicitações sobre seus dados</h2>
         <p>

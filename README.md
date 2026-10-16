@@ -24,6 +24,12 @@ Usuário confirmou cadastro e resumo no WhatsApp. Nova revisão das páginas des
 
 Relatório mensal opcional: autorização por participante, fechamento anterior no dia 1 às 9h de São Paulo, cancelamento pelo chat e modelo Meta aprovado antes de qualquer disparo. Modelo submetido e observado como PENDING/UTILITY durante a preparação. Backend confirmado implantado em 16/10/2026; agendamento mensal habilitado e preferências do proprietário autorizadas por solicitação explícita. Modelo Meta ainda PENDING na última consulta, sem relatório enviado. Amigos devem autorizar pelo chat. Nenhum cadastro, telefone de participante, dado financeiro real ou credencial foi incluído neste repositório.
 
+## Interpretação assistida por IA — 16/10/2026
+
+Páginas revisadas para descrever OpenRouter e OpenAI quando a interpretação estiver habilitada: texto atual, categorias e rascunho necessário, sem acrescentar perfil ou histórico completo à chamada; validação e cálculos continuam no backend. Texto e categorias podem conter dados pessoais. Roteamento exige ZDR/coleta negada, mas não promete ausência de metadados de cobrança/segurança dos fornecedores. Resultados estruturados e controles de uso no backend não possuem TTL; exclusão integral segue manual e considera esses controles.
+
+Publicação antecipada das informações antes da ativação. Chave, avaliação do modelo real e ativação ainda pendentes no projeto privado. Nenhum dado financeiro ou credencial foi copiado. As notas anteriores descrevem o histórico dos incrementos.
+
 ## Arquivos
 
 - `index.html`: apresentação do projeto e navegação.
