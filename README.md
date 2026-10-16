@@ -30,7 +30,7 @@ Páginas revisadas para descrever OpenRouter e o modelo OpenAI pela rota Microso
 
 Publicação antecipada das informações antes da ativação. Chave, avaliação do modelo real e ativação ainda pendentes no projeto privado. Nenhum dado financeiro ou credencial foi copiado. As notas anteriores descrevem o histórico dos incrementos.
 
-A avaliação do projeto privado detectou que a rota direta OpenAI não atendia à exigência ZDR. Rota fixada em Azure (Microsoft) para o mesmo modelo OpenAI, preservando ZDR/coleta negada e teto de preço; páginas ajustadas antes da ativação. Credencial substituída manualmente pelo responsável; nenhuma chave foi copiada para este repositório. Avaliação completa e deploy ainda precisam de confirmação no projeto privado.
+A avaliação do projeto privado detectou que a rota direta OpenAI não atendia à exigência ZDR. Rota fixada em Azure (Microsoft) para o mesmo modelo OpenAI, preservando ZDR/coleta negada e teto de preço; páginas ajustadas antes da ativação. Credencial substituída manualmente pelo responsável; nenhuma chave foi copiada para este repositório. Avaliação fictícia passou 15/15 cenários no modelo real. Implantação da IA e ajuste final confirmados UPDATE_COMPLETE no projeto privado; worker Active/Successful e hash verificado em 16/10/2026 às 15h52min33s de São Paulo. Teste WhatsApp da IA ainda precisa ser relatado pelo proprietário. A chamada inclui também indicador booleano de lançamento recente, sem enviar seus detalhes, para interpretar correções com contexto mínimo.
 
 ## Arquivos
 
