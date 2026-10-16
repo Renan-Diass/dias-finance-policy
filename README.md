@@ -22,7 +22,7 @@ Deploy do piloto confirmado no projeto privado em 16/10/2026; teste real do cada
 
 Usuário confirmou cadastro e resumo no WhatsApp. Nova revisão das páginas descreve observações, gerenciamento de categorias, consultas detalhadas e correções/exclusões lógicas. A exclusão integral dos dados pessoais permanece manual e distinta de remover um gasto dos totais.
 
-Relatório mensal opcional: autorização por participante, fechamento anterior no dia 1 às 9h de São Paulo, cancelamento pelo chat e modelo Meta aprovado antes de qualquer disparo. Modelo submetido e observado como PENDING/UTILITY durante a preparação. Publicação destas páginas acompanha o incremento do backend; consultar o README privado para a evidência final de deploy. Nenhum cadastro, telefone de participante, dado financeiro real ou credencial foi incluído neste repositório.
+Relatório mensal opcional: autorização por participante, fechamento anterior no dia 1 às 9h de São Paulo, cancelamento pelo chat e modelo Meta aprovado antes de qualquer disparo. Modelo submetido e observado como PENDING/UTILITY durante a preparação. Backend confirmado implantado em 16/10/2026; agendamento mensal habilitado e preferências do proprietário autorizadas por solicitação explícita. Modelo Meta ainda PENDING na última consulta, sem relatório enviado. Amigos devem autorizar pelo chat. Nenhum cadastro, telefone de participante, dado financeiro real ou credencial foi incluído neste repositório.
 
 ## Arquivos
 
