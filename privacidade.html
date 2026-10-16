@@ -33,7 +33,8 @@
       <article>
         <p>
           Atualizado em 16 de outubro de 2026, no fuso America/Sao_Paulo. Esta versão descreve o
-          piloto de cadastro, registro de despesas, categorias e resumos pelo WhatsApp.
+          piloto de cadastro, despesas com observações, categorias, correções, consultas e
+          relatórios pelo WhatsApp.
         </p>
         <h2>Responsável e contato</h2>
         <p>
@@ -52,11 +53,31 @@
           verificar sua autenticidade e responder ao remetente identificado pelo evento autenticado
           da Meta. O cadastro e o acesso são vinculados ao identificador desse WhatsApp. A versão de
           registro interpreta descrições claras de despesas por regras locais, prepara uma
-          confirmação com valor, descrição, categoria e data, e solicita esclarecimento quando
-          faltar valor ou categoria. Cada participante acessa somente seus registros. Também é
-          possível criar categorias e consultar os totais registrados por categoria no mês atual.
-          Não há integração bancária, movimentação financeira, relatórios automáticos ou
-          interpretação por inteligência artificial habilitados.
+          confirmação com valor, descrição, observação opcional, categoria e data, e solicita
+          esclarecimento quando faltar valor ou houver ambiguidade entre categorias. Compras sem
+          classificação reconhecida usam Outros e preservam a descrição na observação quando essa
+          categoria estiver ativa. Cada participante acessa somente seus registros. É possível
+          criar, renomear, arquivar, reativar e excluir categorias, corrigir ou excluir despesas dos
+          totais e consultar períodos, categorias e detalhamentos. Exclusões e correções pedem
+          confirmação. Ao excluir categoria com despesas, o usuário escolhe outra categoria para
+          receber o histórico, preservando os valores. Não há integração bancária, movimentação
+          financeira ou interpretação por inteligência artificial habilitados.
+        </p>
+        <h2>Relatório mensal opcional</h2>
+        <p>
+          Cada participante pode autorizar o envio com ativar relatório mensal e interrompê-lo com
+          desativar relatório mensal. Novos cadastros não ativam esse envio automaticamente. O
+          fechamento do mês anterior é programado para o dia 1 às 9h, no horário de São Paulo,
+          condicionado à autorização e à disponibilidade do modelo aprovado pela Meta. O responsável
+          pode registrar a autorização do proprietário quando ele a solicitar expressamente.
+        </p>
+        <p>
+          O relatório enviado pelo WhatsApp inclui mês, total e principais categorias. Um resumo e
+          os parâmetros preparados ficam persistidos por participante e mês para evitar novos envios
+          por reprocessamento; correções posteriores não modificam automaticamente o fechamento já
+          preparado. Aceitação pela API não garante entrega ao aparelho. Datas de agendamento,
+          preferências, resultados e controles de uso são tratados para operar esse serviço, sem
+          finalidade promocional.
         </p>
         <h2>Dados tratados e finalidades</h2>
         <p>
@@ -79,9 +100,10 @@
           código de erro. Esse controle de transporte não precisa armazenar o texto original ou o
           telefone. Para o registro financeiro, são armazenados perfil de cada participante com
           nome, e-mail e identificador do WhatsApp, categorias, despesas em centavos, descrição,
-          data, origem e identificadores das transações. O nome e o e-mail são usados para o
-          cadastro, identificação e atendimento de solicitações relacionadas ao serviço, sem uso
-          para mensagens promocionais. O e-mail é validado apenas pelo formato, sem confirmação de
+          observação quando fornecida ou derivada da compra sem categoria reconhecida, data, origem
+          e identificadores das transações. O nome e o e-mail são usados para o cadastro,
+          identificação e atendimento de solicitações relacionadas ao serviço, sem uso para
+          mensagens promocionais. O e-mail é validado apenas pelo formato, sem confirmação de
           titularidade por link, e não funciona como senha ou chave de acesso. Etapas e respostas do
           cadastro são armazenadas, assim como o contador agregado de vagas do piloto. A resposta
           preparada e o resultado do processamento são persistidos para que reentregas não dupliquem
@@ -134,9 +156,15 @@
           significa remoção física automática. O contexto é substituído ou limpo quando novas
           mensagens são processadas. A aplicação ainda não possui limpeza periódica automatizada
           desses registros ou uma rotina de eliminação automática acionada por conversa. O comando
-          cancelar descarta somente o rascunho pendente; não apaga despesas já registradas ou o
-          histórico técnico de respostas. A retenção e remoção de logs exigem administração
-          separada; não há prazo automático de sete dias confirmado na infraestrutura atual.
+          cancelar descarta o rascunho ou a alteração ainda não confirmada; não apaga despesas já
+          registradas ou o histórico técnico de respostas. Excluir uma despesa pelo chat marca o
+          registro como excluído e o retira dos totais, mas não elimina fisicamente os dados
+          técnicos ou respostas anteriores. Excluir categoria mantém um marcador interno e, quando
+          escolhido, o vínculo de transferência do histórico. A remoção integral dos dados pessoais
+          exige solicitação ao contato do responsável. Snapshots dos relatórios também não possuem
+          expiração automática. Os novos logs da função de relatório mensal têm retenção de quatorze
+          dias. A retenção e remoção dos demais logs exigem administração separada; não há prazo
+          automático de sete dias confirmado na infraestrutura atual.
         </p>
         <p>
           As solicitações de exclusão são recebidas pelo canal indicado abaixo e tratadas

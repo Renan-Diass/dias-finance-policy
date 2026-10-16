@@ -18,6 +18,12 @@ Páginas revisadas para o piloto com proprietário e até cinco amigos, cadastro
 
 Deploy do piloto confirmado no projeto privado em 16/10/2026; teste real do cadastro/resumo pelo WhatsApp ainda pendente. Textos estáticos são publicados antecipadamente para descrever o novo tratamento antes da ativação. As notas anteriores são histórico do incremento de despesas para proprietário.
 
+## Evolução financeira — 16/10/2026
+
+Usuário confirmou cadastro e resumo no WhatsApp. Nova revisão das páginas descreve observações, gerenciamento de categorias, consultas detalhadas e correções/exclusões lógicas. A exclusão integral dos dados pessoais permanece manual e distinta de remover um gasto dos totais.
+
+Relatório mensal opcional: autorização por participante, fechamento anterior no dia 1 às 9h de São Paulo, cancelamento pelo chat e modelo Meta aprovado antes de qualquer disparo. Modelo submetido e observado como PENDING/UTILITY durante a preparação. Publicação destas páginas acompanha o incremento do backend; consultar o README privado para a evidência final de deploy. Nenhum cadastro, telefone de participante, dado financeiro real ou credencial foi incluído neste repositório.
+
 ## Arquivos
 
 - `index.html`: apresentação do projeto e navegação.
