@@ -4,13 +4,13 @@ Páginas públicas de privacidade e exclusão de dados do projeto Agente Finance
 
 ## Contexto de continuidade
 
-Atualizado em **15/10/2026**, fuso `America/Sao_Paulo`.
+Atualizado em **16/10/2026**, fuso `America/Sao_Paulo`.
 
 - O responsável escolheu a identificação pública **Dias Finance** e o contato exibido nas páginas.
-- O backend atual apenas confirma a conexão com o WhatsApp; não há interpretação por IA nem registro de despesas por texto habilitados.
+- Páginas revisadas para o incremento de despesas por texto: valores/descrições/categorias/datas, confirmações e contexto persistido. O deploy do incremento está sendo validado no projeto privado. Sem chamadas IA, integração bancária ou movimentação financeira.
 - A exclusão de dados é solicitada pelo contato público e tratada manualmente; não há callback automático implementado.
-- O teste de exemplo Meta → webhook AWS foi confirmado; mensagem real de ida e volta e publicação do app Meta continuam pendentes de validação.
-- Conteúdo enviado ao GitHub por commit e push. GitHub Pages ativado em main/raiz, com HTTPS obrigatório; o agente confirmou HTTP 200 e conteúdo esperado nas três URLs públicas em 15/10/2026. Publicação do app Meta e teste real de mensagens continuam pendentes.
+- App Meta publicado e ida e volta de conexão confirmada pelo proprietário em 15/10/2026; teste real de despesas depende do incremento.
+- Conteúdo enviado ao GitHub por commit e push. GitHub Pages ativado em main/raiz, com HTTPS obrigatório; o agente confirmou HTTP 200 e conteúdo esperado nas três URLs públicas em 15/10/2026. A revisão de 16/10 atualiza o escopo de tratamento; verificar o novo conteúdo publicado após o push.
 
 ## Arquivos
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Como o projeto trata os dados necessários à conexão pelo WhatsApp."
+      content="Como o projeto trata mensagens, despesas e dados necessários ao seu funcionamento."
     />
     <meta name="color-scheme" content="light" />
     <title>Política de Privacidade | Dias Finance</title>
@@ -27,9 +27,14 @@
     <main id="conteudo">
       <p class="eyebrow">INFORMAÇÕES DO PROJETO</p>
       <h1>Política de Privacidade</h1>
-      <p class="lead">Como o projeto trata os dados necessários à conexão pelo WhatsApp.</p>
+      <p class="lead">
+        Como o projeto trata mensagens, despesas e dados necessários ao seu funcionamento.
+      </p>
       <article>
-        <p>Atualizado em 15 de outubro de 2026.</p>
+        <p>
+          Atualizado em 16 de outubro de 2026, no fuso America/Sao_Paulo. Esta versão descreve a
+          conexão e o registro de despesas por texto para o proprietário.
+        </p>
         <h2>Responsável e contato</h2>
         <p>
           O Agente Financeiro Pessoal é um projeto pessoal identificado publicamente como
@@ -43,10 +48,12 @@
         <h2>Funcionamento atual</h2>
         <p>
           O aplicativo utiliza a WhatsApp Cloud API oficial para receber eventos de mensagens,
-          verificar sua autenticidade e responder ao remetente autorizado. Neste estágio, a resposta
-          automática apenas confirma a conexão. O registro de despesas por mensagens, consultas
-          financeiras, relatórios automáticos e interpretação por inteligência artificial ainda não
-          estão habilitados no fluxo WhatsApp.
+          verificar sua autenticidade e responder ao remetente autorizado. A versão de registro
+          interpreta descrições claras de despesas por regras locais, prepara uma confirmação com
+          valor, descrição, categoria e data, e solicita esclarecimento quando faltar valor ou
+          categoria. O acesso permanece restrito ao proprietário. Consultas financeiras
+          conversacionais, relatórios automáticos e interpretação por inteligência artificial ainda
+          não estão habilitados.
         </p>
         <h2>Dados tratados e finalidades</h2>
         <p>
@@ -64,7 +71,13 @@
           Mensagens autorizadas podem transitar temporariamente na fila com seu texto e
           identificadores. O controle persistente de processamento mantém identificadores derivados
           da mensagem, estado, contadores de uso, tentativas e, quando disponível, ID da resposta ou
-          código de erro. Esse controle não precisa armazenar o texto original ou o telefone.
+          código de erro. Esse controle de transporte não precisa armazenar o texto original ou o
+          telefone. Para o registro financeiro, são armazenados perfil do proprietário e seu
+          identificador autorizado, categorias, despesas em centavos, descrição, data, origem e
+          identificadores das transações. A resposta preparada e o resultado do processamento são
+          persistidos para que reentregas não dupliquem despesas. Esclarecimentos pendentes
+          armazenam somente o rascunho necessário, incluindo descrição, valor, categoria, data e
+          prazo de validade.
         </p>
         <p>
           Dados técnicos de execução também podem ser mantidos para diagnóstico e segurança. O
@@ -106,10 +119,15 @@
         </p>
         <p>
           Os controles de processamento no DynamoDB não possuem expiração automática nesta versão,
-          para impedir reprocessamento de eventos antigos. A aplicação ainda não possui limpeza
-          periódica automatizada desses registros ou uma rotina de eliminação automática acionada
-          por conversa. A retenção e remoção de logs exigem administração separada; não há prazo
-          automático de sete dias confirmado na infraestrutura atual.
+          para impedir reprocessamento de eventos antigos. Despesas, categorias, perfil e respostas
+          processadas também não possuem expiração automática. Uma pendência deixa de ser aceita
+          após 30 minutos; esse prazo é lógico e não significa remoção física automática. O contexto
+          é substituído ou limpo quando novas mensagens são processadas. A aplicação ainda não
+          possui limpeza periódica automatizada desses registros ou uma rotina de eliminação
+          automática acionada por conversa. O comando cancelar descarta somente o rascunho pendente;
+          não apaga despesas já registradas ou o histórico técnico de respostas. A retenção e
+          remoção de logs exigem administração separada; não há prazo automático de sete dias
+          confirmado na infraestrutura atual.
         </p>
         <p>
           As solicitações de exclusão são recebidas pelo canal indicado abaixo e tratadas
