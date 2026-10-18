@@ -52,17 +52,18 @@
           O aplicativo utiliza a WhatsApp Cloud API oficial para receber eventos de mensagens,
           verificar sua autenticidade e responder ao remetente identificado pelo evento autenticado
           da Meta. O cadastro e o acesso são vinculados ao identificador desse WhatsApp. A versão de
-          registro interpreta descrições claras de despesas por regras locais, prepara uma
-          confirmação com valor, descrição, observação opcional, categoria e data, e solicita
-          esclarecimento quando faltar valor ou houver ambiguidade entre categorias. Compras sem
-          classificação reconhecida usam Outros e preservam a descrição na observação quando essa
-          categoria estiver ativa. Cada participante acessa somente seus registros. É possível
-          criar, renomear, arquivar, reativar e excluir categorias, corrigir ou excluir despesas dos
-          totais e consultar períodos, categorias e detalhamentos. Exclusões e correções pedem
-          confirmação. Ao excluir categoria com despesas, o usuário escolhe outra categoria para
-          receber o histórico, preservando os valores. Não há integração bancária nem movimentação
-          financeira. A interpretação assistida por IA, descrita abaixo, depende de habilitação pelo
-          responsável; a aplicação também funciona com regras locais.
+          registro valida valores e dados de despesas no backend, usando interpretação por IA para
+          mensagens livres quando habilitada, prepara uma confirmação com valor, descrição,
+          observação opcional, categoria e data, e solicita esclarecimento quando faltar valor ou
+          houver ambiguidade entre categorias. Compras sem classificação reconhecida usam Outros e
+          preservam a descrição na observação quando essa categoria estiver ativa. Cada participante
+          acessa somente seus registros. É possível criar, renomear, arquivar, reativar e excluir
+          categorias, corrigir ou excluir despesas dos totais e consultar períodos, categorias e
+          detalhamentos. Exclusões e correções pedem confirmação. Ao excluir categoria com despesas,
+          o usuário escolhe outra categoria para receber o histórico, preservando os valores. Não há
+          integração bancária nem movimentação financeira. A interpretação assistida por IA,
+          descrita abaixo, depende de habilitação pelo responsável; a aplicação também funciona com
+          regras locais.
         </p>
         <h2>Relatório mensal opcional</h2>
         <p>
@@ -134,16 +135,17 @@
         </p>
         <h2>Interpretação assistida por inteligência artificial</h2>
         <p>
-          Quando habilitada pelo responsável, a IA auxilia na compreensão de mensagens que as regras
-          locais não resolvem, por meio do OpenRouter com o modelo openai/gpt-6-luna da OpenAI,
-          executado pela rota Azure da Microsoft. Podem ser enviados o texto atual, a data local,
-          nomes/identificadores/estado de categorias do participante, um indicador da existência de
-          lançamento recente e a descrição/campo faltante de eventual rascunho. Para acompanhar a
-          conversa, também podem ser enviados as duas últimas trocas curtas, a ação incompleta e um
-          resumo do gasto selecionado e de até cinco opções do próprio participante (item, valor,
-          categoria, data e observação abreviados, com posições temporárias). Esse contexto tem
-          validade lógica de 30 minutos, renovada pela interação; não inclui o histórico financeiro
-          completo. Nome, e-mail e identificador do WhatsApp do perfil, identificadores internos de
+          Quando habilitada pelo responsável, a IA identifica a intenção das mensagens livres antes
+          de registrar despesas, usando o contexto limitado da conversa, por meio do OpenRouter com
+          o modelo openai/gpt-6-luna da OpenAI, executado pela rota Azure da Microsoft. Podem ser
+          enviados o texto atual, a data local, nomes/identificadores/estado de categorias do
+          participante, um indicador da existência de lançamento recente e a descrição/campo
+          faltante de eventual rascunho. Para acompanhar a conversa, também podem ser enviados as
+          duas últimas trocas curtas, a ação incompleta e um resumo do gasto selecionado e de até
+          cinco opções do próprio participante (item, valor, categoria, data e observação
+          abreviados, com posições temporárias). Esse contexto tem validade lógica de 30 minutos,
+          renovada pela interação; não inclui o histórico financeiro completo. Nome, e-mail e
+          identificador do WhatsApp do perfil, identificadores internos de
           usuário/mensagem/transação e histórico financeiro completo não são acrescentados à
           chamada. O texto que a própria pessoa envia é preservado dentro dos limites da
           mensagem/contexto. O próprio texto, observação ou nome de categoria pode conter dados
@@ -154,8 +156,10 @@
           persistência são validados ou calculados pelo backend. Alterações e exclusões de despesas
           continuam exigindo prévia e confirmação explícita. Respostas podem conter erros de
           interpretação; confira a confirmação do registro e utilize os comandos de correção quando
-          necessário. Falha ou limite de uso levam às regras locais ou a um pedido de
-          esclarecimento.
+          necessário. Com IA habilitada, falha ou limite de uso impedem novos registros por mensagem
+          livre e levam a um pedido de esclarecimento; não há registro financeiro automático por
+          fallback. Menus, confirmação, cancelamento e comandos determinísticos podem continuar
+          locais.
         </p>
         <p>
           O roteamento solicita provedor com Zero Data Retention (ZDR), coleta de dados negada e

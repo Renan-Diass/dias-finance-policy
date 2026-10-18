@@ -61,3 +61,7 @@ Os textos-fonte e o gerador ficam no projeto financeiro, em `docs/publicacao` e 
 Revisão antecipada das páginas para o fluxo contextual aprovado no projeto privado: além da mensagem atual e categorias, a IA pode receber duas trocas curtas, a tarefa incompleta e resumos do gasto selecionado e de até cinco opções do próprio participante. Não acrescentar perfil, identificadores internos ou histórico financeiro completo. Validade lógica de 30 minutos renovada pela interação não equivale a exclusão física automática. A seleção permite referências naturais e opções temporárias; mudanças e exclusões continuam com prévia e confirmação. Observação preserva item/local mesmo com categoria reconhecida. Modelo, rota Azure e limites não são alterados por essa revisão.
 
 Validação fictícia da conversa no projeto privado e testes locais aprovados; implantação contextual ainda pendente nesta publicação. A consulta natural anterior foi confirmada pelo proprietário. Nenhuma conversa, despesa ou identificação de participante foi publicada.
+
+## Ordem de interpretação — 18/10/2026
+
+Após teste de uso, o responsável aprovou interpretar mensagens livres pela IA antes de registrar e impedir fallback financeiro quando o modelo falhar/atingir a cota. Texto/contexto limitado e mesmos fornecedores/tetos; comandos determinísticos seguros continuam locais. Páginas atualizadas antes da correção de produção; teste WhatsApp após a correção ainda pendente. Nenhum dado financeiro ou conversa real foi copiado.
