@@ -65,3 +65,5 @@ Validação fictícia da conversa no projeto privado e testes locais aprovados; 
 ## Ordem de interpretação — 18/10/2026
 
 Após teste de uso, o responsável aprovou interpretar mensagens livres pela IA antes de registrar e impedir fallback financeiro quando o modelo falhar/atingir a cota. Texto/contexto limitado e mesmos fornecedores/tetos; comandos determinísticos seguros continuam locais. Páginas atualizadas antes da correção de produção; teste WhatsApp após a correção ainda pendente. Nenhum dado financeiro ou conversa real foi copiado.
+
+Correção da ordem de interpretação ativada e verificada no projeto privado em 18/10/2026 às 09h47min56s (America/Sao_Paulo), com mesmos modelo e tetos. Testes fictícios da rota numérica e 427 testes locais aprovados; novo teste pelo WhatsApp ainda pendente. A primeira versão apresentou falha no uso real, corrigida após aprovação do responsável; isso não representa garantia de interpretação perfeita. Nenhum gasto real foi excluído pelo agente.
