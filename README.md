@@ -4,7 +4,7 @@ Páginas públicas de privacidade e exclusão de dados do projeto Agente Finance
 
 ## Contexto de continuidade
 
-Atualizado em **16/10/2026**, fuso `America/Sao_Paulo`.
+Atualizado em **18/10/2026**, fuso `America/Sao_Paulo`.
 
 - O responsável escolheu a identificação pública **Dias Finance** e o contato exibido nas páginas.
 - Páginas revisadas para o incremento de despesas por texto: valores/descrições/categorias/datas, confirmações e contexto persistido. Incremento implantado em 16/10/2026; teste real de despesa ainda pendente. Sem chamadas IA, integração bancária ou movimentação financeira.
@@ -55,3 +55,9 @@ Usar as duas últimas URLs nos campos de Política de Privacidade e URL de instr
 ## Manutenção
 
 Os textos-fonte e o gerador ficam no projeto financeiro, em `docs/publicacao` e `scripts/build-policy-pages.mjs`. Para mudanças futuras, revisar o funcionamento real, atualizar os textos, executar `npm run pages:build` na cópia que contém o gerador e sincronizar apenas os cinco arquivos estáticos. Não publicar `.env`, tokens, dados de mensagens, artefatos AWS ou documentação interna.
+
+## Conversa contextual — 18/10/2026
+
+Revisão antecipada das páginas para o fluxo contextual aprovado no projeto privado: além da mensagem atual e categorias, a IA pode receber duas trocas curtas, a tarefa incompleta e resumos do gasto selecionado e de até cinco opções do próprio participante. Não acrescentar perfil, identificadores internos ou histórico financeiro completo. Validade lógica de 30 minutos renovada pela interação não equivale a exclusão física automática. A seleção permite referências naturais e opções temporárias; mudanças e exclusões continuam com prévia e confirmação. Observação preserva item/local mesmo com categoria reconhecida. Modelo, rota Azure e limites não são alterados por essa revisão.
+
+Validação fictícia da conversa no projeto privado e testes locais aprovados; implantação contextual ainda pendente nesta publicação. A consulta natural anterior foi confirmada pelo proprietário. Nenhuma conversa, despesa ou identificação de participante foi publicada.

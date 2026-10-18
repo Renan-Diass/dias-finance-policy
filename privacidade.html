@@ -32,7 +32,7 @@
       </p>
       <article>
         <p>
-          Atualizado em 16 de outubro de 2026, no fuso America/Sao_Paulo. Esta versão descreve o
+          Atualizado em 18 de outubro de 2026, no fuso America/Sao_Paulo. Esta versão descreve o
           piloto de cadastro, despesas com observações, categorias, correções, consultas, relatórios
           e interpretação assistida por IA quando habilitada.
         </p>
@@ -101,8 +101,8 @@
           código de erro. Esse controle de transporte não precisa armazenar o texto original ou o
           telefone. Para o registro financeiro, são armazenados perfil de cada participante com
           nome, e-mail e identificador do WhatsApp, categorias, despesas em centavos, descrição,
-          observação quando fornecida ou derivada da compra sem categoria reconhecida, data, origem
-          e identificadores das transações. O nome e o e-mail são usados para o cadastro,
+          observação quando fornecida ou derivada da descrição da compra, data, origem e
+          identificadores das transações. O nome e o e-mail são usados para o cadastro,
           identificação e atendimento de solicitações relacionadas ao serviço, sem uso para
           mensagens promocionais. O e-mail é validado apenas pelo formato, sem confirmação de
           titularidade por link, e não funciona como senha ou chave de acesso. Etapas e respostas do
@@ -138,11 +138,16 @@
           locais não resolvem, por meio do OpenRouter com o modelo openai/gpt-6-luna da OpenAI,
           executado pela rota Azure da Microsoft. Podem ser enviados o texto atual, a data local,
           nomes/identificadores/estado de categorias do participante, um indicador da existência de
-          lançamento recente (sem seus detalhes) e eventual rascunho de despesa pendente. Nome,
-          e-mail e identificador do WhatsApp do perfil, identificadores internos de usuário/mensagem
-          e histórico financeiro completo não são acrescentados à chamada. O próprio texto,
-          observação ou nome de categoria pode conter dados pessoais; não envie informações
-          sensíveis ou credenciais.
+          lançamento recente e a descrição/campo faltante de eventual rascunho. Para acompanhar a
+          conversa, também podem ser enviados as duas últimas trocas curtas, a ação incompleta e um
+          resumo do gasto selecionado e de até cinco opções do próprio participante (item, valor,
+          categoria, data e observação abreviados, com posições temporárias). Esse contexto tem
+          validade lógica de 30 minutos, renovada pela interação; não inclui o histórico financeiro
+          completo. Nome, e-mail e identificador do WhatsApp do perfil, identificadores internos de
+          usuário/mensagem/transação e histórico financeiro completo não são acrescentados à
+          chamada. O texto que a própria pessoa envia é preservado dentro dos limites da
+          mensagem/contexto. O próprio texto, observação ou nome de categoria pode conter dados
+          pessoais; não envie informações sensíveis ou credenciais.
         </p>
         <p>
           A IA propõe uma ação estruturada. Valores, datas, categorias, autorização, totais e
@@ -190,18 +195,20 @@
           para impedir reprocessamento de eventos antigos. Despesas, categorias, perfil, respostas
           processadas, etapas de cadastro e cadastros incompletos também não possuem expiração
           automática. Uma pendência deixa de ser aceita após 30 minutos; esse prazo é lógico e não
-          significa remoção física automática. O contexto é substituído ou limpo quando novas
-          mensagens são processadas. A aplicação ainda não possui limpeza periódica automatizada
-          desses registros ou uma rotina de eliminação automática acionada por conversa. O comando
-          cancelar descarta o rascunho ou a alteração ainda não confirmada; não apaga despesas já
-          registradas ou o histórico técnico de respostas. Excluir uma despesa pelo chat marca o
-          registro como excluído e o retira dos totais, mas não elimina fisicamente os dados
-          técnicos ou respostas anteriores. Excluir categoria mantém um marcador interno e, quando
-          escolhido, o vínculo de transferência do histórico. A remoção integral dos dados pessoais
-          exige solicitação ao contato do responsável. Snapshots dos relatórios também não possuem
-          expiração automática. Os novos logs da função de relatório mensal têm retenção de quatorze
-          dias. A retenção e remoção dos demais logs exigem administração separada; não há prazo
-          automático de sete dias confirmado na infraestrutura atual.
+          significa remoção física automática. O contexto de conversa guarda a seleção, opções, ação
+          pendente e até duas trocas curtas; sua validade de 30 minutos é lógica e não representa
+          exclusão física automática. Ele é substituído ou limpo conforme novas mensagens são
+          processadas. A aplicação ainda não possui limpeza periódica automatizada desses registros
+          ou uma rotina de eliminação automática acionada por conversa. O comando cancelar descarta
+          o rascunho ou a alteração ainda não confirmada; não apaga despesas já registradas ou o
+          histórico técnico de respostas. Excluir uma despesa pelo chat marca o registro como
+          excluído e o retira dos totais, mas não elimina fisicamente os dados técnicos ou respostas
+          anteriores. Excluir categoria mantém um marcador interno e, quando escolhido, o vínculo de
+          transferência do histórico. A remoção integral dos dados pessoais exige solicitação ao
+          contato do responsável. Snapshots dos relatórios também não possuem expiração automática.
+          Os novos logs da função de relatório mensal têm retenção de quatorze dias. A retenção e
+          remoção dos demais logs exigem administração separada; não há prazo automático de sete
+          dias confirmado na infraestrutura atual.
         </p>
         <p>
           As solicitações de exclusão são recebidas pelo canal indicado abaixo e tratadas
