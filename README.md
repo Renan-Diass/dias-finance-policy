@@ -4,7 +4,7 @@ Páginas públicas de privacidade e exclusão de dados do projeto Agente Finance
 
 ## Contexto de continuidade
 
-Atualizado em **18/10/2026**, fuso `America/Sao_Paulo`.
+Atualizado em **21/10/2026**, fuso `America/Sao_Paulo`.
 
 - O responsável escolheu a identificação pública **Dias Finance** e o contato exibido nas páginas.
 - Páginas revisadas para o incremento de despesas por texto: valores/descrições/categorias/datas, confirmações e contexto persistido. Incremento implantado em 16/10/2026; teste real de despesa ainda pendente. Sem chamadas IA, integração bancária ou movimentação financeira.
