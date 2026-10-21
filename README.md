@@ -74,3 +74,6 @@ Correção da ordem de interpretação ativada e verificada no projeto privado e
 Páginas atualizadas antes da ativação para descrever exclusão lógica de todos os próprios gastos de um mês/ano, com prévia e confirmação específica, preservando cadastro, categorias e outros meses. Registros anteriores e histórico técnico permanecem; eliminação pessoal continua pelo contato público.
 
 Relatório opcional com dia por participante de 1 a 31, às 9h de São Paulo, sobre o mês anterior; dia inexistente usa o último dia do mês de envio. Checagem diária e controle lógico de entrega por pessoa/período. Alterar só o dia preserva consentimento; pedido de receber autoriza o envio. Mesmos modelo/provedor/tetos. Projeto privado validou fluxos fictícios e DynamoDB Local; implantação dos controles ainda pendente nesta publicação. Nenhum cadastro, conversa, gasto ou credencial foi publicado.
+
+
+Controles mensais ativados e verificados no projeto privado em 21/10/2026: agenda diária às 9h de São Paulo, dia por participante e exclusão lógica de mês com confirmação específica. Modelo mensal Meta observado APPROVED/UTILITY/pt_BR. Novos testes de uso no WhatsApp e entrega na data escolhida seguem pendentes; não houve exclusão de gastos reais nem envio de relatório como teste pelo agente. As três páginas públicas tiveram HTTP 200/conteúdo conferidos antes da ativação.
