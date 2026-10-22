@@ -32,7 +32,7 @@
       </p>
       <article>
         <p>
-          Atualizado em 21 de outubro de 2026, no fuso America/Sao_Paulo. Esta versão descreve o
+          Atualizado em 22 de outubro de 2026, no fuso America/Sao_Paulo. Esta versão descreve o
           piloto de cadastro, despesas com observações, categorias, correções, consultas, relatórios
           e interpretação assistida por IA quando habilitada.
         </p>
@@ -111,8 +111,9 @@
           observação quando fornecida ou derivada da descrição da compra, data, origem e
           identificadores das transações. O nome e o e-mail são usados para o cadastro,
           identificação e atendimento de solicitações relacionadas ao serviço, sem uso para
-          mensagens promocionais. O e-mail é validado apenas pelo formato, sem confirmação de
-          titularidade por link, e não funciona como senha ou chave de acesso. Etapas e respostas do
+          mensagens promocionais. No cadastro pelo WhatsApp, o e-mail é validado apenas pelo formato
+          e não funciona como senha ou chave de acesso. O login separado do dashboard exige
+          confirmação de titularidade do e-mail, conforme descrito abaixo. Etapas e respostas do
           cadastro são armazenadas, assim como o contador agregado de vagas do piloto. A resposta
           preparada e o resultado do processamento são persistidos para que reentregas não dupliquem
           despesas. Esclarecimentos pendentes armazenam somente o rascunho necessário, incluindo
@@ -138,6 +139,43 @@
             >declaração de privacidade</a
           >. As páginas preparadas pelo projeto não incluem formulário de coleta, cookies próprios
           de rastreamento ou ferramentas de publicidade.
+        </p>
+        <h2>Dashboard privado de consulta</h2>
+        <p>
+          O painel web permite consultar os próprios gastos, filtrar lançamentos, visualizar
+          categorias e comparar meses. A abertura e o comando Atualizar consultam os registros
+          atuais; não representam um fechamento imutável do relatório já enviado pelo WhatsApp. O
+          painel não altera nem exclui gastos. A demonstração pública usa somente dados fictícios.
+        </p>
+        <p>
+          O acesso usa Amazon Cognito com e-mail confirmado e senha definida pela própria pessoa no
+          serviço de autenticação. Um código de conexão individual, vinculado ao e-mail confirmado,
+          de uso único e válido por trinta minutos, permite vincular a identidade de login ao
+          participante WhatsApp após conferência pelo responsável. O e-mail antigo do cadastro não
+          concede acesso automaticamente. Identidade de login, vínculo, resumo criptográfico do
+          convite, prazo e contadores técnicos são mantidos para autorização e controle de uso. O
+          código é verificado por prazo e consumo, mesmo antes da remoção automática pelo DynamoDB.
+          Vínculos não expiram automaticamente; podem ser revogados pelo responsável.
+        </p>
+        <p>
+          Tokens de acesso do painel ficam somente na memória da página; recarregar ou encerrar a
+          página exige nova entrada. O verificador temporário da entrada usa o armazenamento de
+          sessão do navegador. O serviço Cognito pode manter cookies necessários ao login. Exportar
+          CSV grava uma cópia dos lançamentos filtrados no dispositivo da própria pessoa, que deve
+          protegê-la. Não há sincronização automática com Google Sheets ou Looker Studio nesta
+          versão.
+        </p>
+        <p>
+          A API, os dados financeiros e os vínculos do dashboard ficam na AWS em São Paulo. Os
+          arquivos estáticos do site ficam na AWS em Norte da Virgínia e são distribuídos
+          globalmente pelo CloudFront, que pode tratar endereço IP e dados técnicos de acesso para
+          entrega e segurança. O bucket do site não contém dados financeiros. O serviço de
+          autenticação e seus e-mails de verificação envolvem tratamento técnico pela AWS. Os logs
+          novos da API têm retenção de quatorze dias; contadores temporários e convites possuem
+          expiração técnica, cuja remoção física pode ocorrer depois do prazo lógico de validade. O
+          acesso ao painel não envia dados financeiros à IA. Solicitações de exclusão integral
+          também devem abranger conta de login, vínculos e convites identificáveis, além dos dados
+          do bot.
         </p>
         <h2>Interpretação assistida por inteligência artificial</h2>
         <p>

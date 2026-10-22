@@ -85,3 +85,8 @@ Política atualizada antes da ativação para descrever seleção de até cinco 
 
 
 Exclusão em grupo ativada e verificada no projeto privado em 21/10/2026 às 22h36 de São Paulo, após publicação compatível. Fluxo exige prévia e confirmar/cancelar, com proteção contra exclusão parcial e reentrega. Mesmos modelo/provedor/tetos, sem mudança da agenda. Teste de uso pelo WhatsApp ainda pendente; agente não excluiu gastos reais nem enviou relatório como teste. As páginas públicas foram conferidas antes da ativação. Nenhuma planilha ou dado financeiro foi publicado neste repositório.
+
+
+## Dashboard privado — 22/10/2026
+
+Informações públicas atualizadas para descrever o dashboard de consulta, login Cognito com e-mail confirmado, vínculo separado por convite de uso único, tokens somente na memória da página e exportação local CSV. API/dados financeiros/vínculos permanecem em São Paulo; arquivos estáticos em Norte da Virgínia e CDN global, sem despesas no bucket público de entrega. Não há sincronização automática Google nesta versão. Exclusão integral também deve considerar identidade/vínculos/convites/sessões. Textos publicados antecipadamente; não comprovam teste autenticado do painel. Nenhum e-mail de login, convite, token ou gasto real foi incluído.
