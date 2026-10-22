@@ -77,3 +77,8 @@ Relatório opcional com dia por participante de 1 a 31, às 9h de São Paulo, so
 
 
 Controles mensais ativados e verificados no projeto privado em 21/10/2026: agenda diária às 9h de São Paulo, dia por participante e exclusão lógica de mês com confirmação específica. Modelo mensal Meta observado APPROVED/UTILITY/pt_BR. Novos testes de uso no WhatsApp e entrega na data escolhida seguem pendentes; não houve exclusão de gastos reais nem envio de relatório como teste pelo agente. As três páginas públicas tiveram HTTP 200/conteúdo conferidos antes da ativação.
+
+
+## Exclusão em grupo — 21/10/2026
+
+Política atualizada antes da ativação para descrever seleção de até cinco gastos próprios da última lista, prévia com total, confirmação e exclusão lógica atômica/idempotente. Se algum alvo mudar ou estiver inválido, nenhum item é excluído. Novo fluxo aprovado pelo responsável, testes fictícios e DynamoDB Local passaram; ativação ainda pendente nesta publicação. Nenhuma despesa real ou conta privada foi publicada.
