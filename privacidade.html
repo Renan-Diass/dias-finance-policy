@@ -148,14 +148,17 @@
           painel não altera nem exclui gastos. A demonstração pública usa somente dados fictícios.
         </p>
         <p>
-          O acesso usa Amazon Cognito com e-mail confirmado e senha definida pela própria pessoa no
-          serviço de autenticação. Um código de conexão individual, vinculado ao e-mail confirmado,
-          de uso único e válido por trinta minutos, permite vincular a identidade de login ao
-          participante WhatsApp após conferência pelo responsável. O e-mail antigo do cadastro não
-          concede acesso automaticamente. Identidade de login, vínculo, resumo criptográfico do
-          convite, prazo e contadores técnicos são mantidos para autorização e controle de uso. O
-          código é verificado por prazo e consumo, mesmo antes da remoção automática pelo DynamoDB.
-          Vínculos não expiram automaticamente; podem ser revogados pelo responsável.
+          O cadastro no painel é restrito aos e-mails previamente liberados pelo responsável por até
+          24 horas; essa liberação é mantida como resumo criptográfico e não confirma a
+          titularidade. O acesso usa Amazon Cognito com e-mail confirmado e senha definida pela
+          própria pessoa no serviço de autenticação. Um código de conexão individual, vinculado ao
+          e-mail confirmado, de uso único e válido por trinta minutos, permite vincular a identidade
+          de login ao participante WhatsApp após conferência pelo responsável. O e-mail antigo do
+          cadastro não concede acesso automaticamente. Identidade de login, vínculo, resumo
+          criptográfico do convite, prazo e contadores técnicos são mantidos para autorização e
+          controle de uso. O código é verificado por prazo e consumo, mesmo antes da remoção
+          automática pelo DynamoDB. Vínculos não expiram automaticamente; podem ser revogados pelo
+          responsável.
         </p>
         <p>
           Tokens de acesso do painel ficam somente na memória da página; recarregar ou encerrar a

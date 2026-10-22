@@ -90,3 +90,5 @@ Exclusão em grupo ativada e verificada no projeto privado em 21/10/2026 às 22h
 ## Dashboard privado — 22/10/2026
 
 Informações públicas atualizadas para descrever o dashboard de consulta, login Cognito com e-mail confirmado, vínculo separado por convite de uso único, tokens somente na memória da página e exportação local CSV. API/dados financeiros/vínculos permanecem em São Paulo; arquivos estáticos em Norte da Virgínia e CDN global, sem despesas no bucket público de entrega. Não há sincronização automática Google nesta versão. Exclusão integral também deve considerar identidade/vínculos/convites/sessões. Textos publicados antecipadamente; não comprovam teste autenticado do painel. Nenhum e-mail de login, convite, token ou gasto real foi incluído.
+
+Cadastro do painel limitado a e-mails previamente liberados, sem confirmação automática de titularidade. Demonstração estática publicada; login real aguarda cota de infraestrutura. Atualização do texto não comprova ativação do acesso financeiro.
