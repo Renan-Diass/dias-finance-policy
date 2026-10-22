@@ -82,3 +82,6 @@ Controles mensais ativados e verificados no projeto privado em 21/10/2026: agend
 ## Exclusão em grupo — 21/10/2026
 
 Política atualizada antes da ativação para descrever seleção de até cinco gastos próprios da última lista, prévia com total, confirmação e exclusão lógica atômica/idempotente. Se algum alvo mudar ou estiver inválido, nenhum item é excluído. Novo fluxo aprovado pelo responsável, testes fictícios e DynamoDB Local passaram; ativação ainda pendente nesta publicação. Nenhuma despesa real ou conta privada foi publicada.
+
+
+Exclusão em grupo ativada e verificada no projeto privado em 21/10/2026 às 22h36 de São Paulo, após publicação compatível. Fluxo exige prévia e confirmar/cancelar, com proteção contra exclusão parcial e reentrega. Mesmos modelo/provedor/tetos, sem mudança da agenda. Teste de uso pelo WhatsApp ainda pendente; agente não excluiu gastos reais nem enviou relatório como teste. As páginas públicas foram conferidas antes da ativação. Nenhuma planilha ou dado financeiro foi publicado neste repositório.
