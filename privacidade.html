@@ -32,7 +32,7 @@
       </p>
       <article>
         <p>
-          Atualizado em 22 de outubro de 2026, no fuso America/Sao_Paulo. Esta versão descreve o
+          Atualizado em 23 de novembro de 2026, no fuso America/Sao_Paulo. Esta versão descreve o
           piloto de cadastro, despesas com observações, categorias, correções, consultas, relatórios
           e interpretação assistida por IA quando habilitada.
         </p>
@@ -233,6 +233,41 @@
           O responsável não utiliza o conteúdo das mensagens para publicidade nem o vende a
           anunciantes. Os dados são utilizados na operação e manutenção do projeto e nas
           solicitações do titular.
+        </p>
+        <h2>Imagens, PDFs e mensagens de voz</h2>
+        <p>
+          Quando a leitura de mídia está habilitada, o participante pode enviar fotos e prints de
+          compras/comprovantes em JPEG/PNG, notas fiscais ou comprovantes em PDF e mensagens de voz
+          do WhatsApp. O envio solicita essa interpretação. Os limites atuais são imagem de até 2
+          MB/4 megapixels, PDF sem senha de até 5 MB/5 páginas e voz Ogg/Opus de até 1 MB/60
+          segundos. A leitura prepara um rascunho de um único lançamento por arquivo; a pessoa deve
+          conferir e confirmar antes de salvar. Documentos ilegíveis, faturas, vários comprovantes
+          independentes, operações canceladas ou ainda não concluídas podem exigir texto ou revisão
+          no painel. A interpretação não garante autenticidade fiscal nem comprova pagamento.
+        </p>
+        <p>
+          O backend baixa o arquivo pela API autenticada da Meta e verifica tamanho, tipo e
+          integridade. O arquivo original permanece em memória durante o processamento e não é
+          gravado no armazenamento do Dias Finance. A mídia e a legenda podem conter dados pessoais
+          e financeiros; ao enviar, considere que esse conteúdo será encaminhado pelo OpenRouter ao
+          fornecedor do modelo. Não envie senhas, códigos, documentos de identidade ou dados
+          bancários completos. A transcrição utiliza Whisper Large V3; a extração de fotos, PDFs e
+          texto transcrito utiliza GPT-6 Luna. As chamadas exigem rotas com retenção zero e coleta
+          negada; PDFs usam processamento nativo, sem fallback automático para outro serviço de OCR.
+          Os fornecedores elegíveis podem variar por disponibilidade e o processamento pode ocorrer
+          fora do Brasil. Esses controles não eliminam os metadados técnicos de cobrança e segurança
+          dos fornecedores.
+        </p>
+        <p>
+          O texto transcrito fica em memória na extração. Os campos estruturados lidos, rascunhos,
+          respostas, hashes de correlação e controles de cota/idempotência são persistidos no
+          DynamoDB para revisão e proteção contra reprocessamento. A revisão expira logicamente em
+          30 minutos, mas não existe remoção física automática desses dados derivados. Arquivos e
+          mensagens mantidos pelo WhatsApp/Meta seguem suas próprias políticas; o Dias Finance não
+          os apaga da conversa. O reenvio dos mesmos bytes não cria automaticamente outro
+          lançamento. Cópias diferentes do mesmo comprovante podem ter hashes diferentes: confira se
+          a compra já está registrada antes de confirmar. A exclusão integral continua pelo canal
+          indicado nesta política.
         </p>
         <h2>Armazenamento e retenção</h2>
         <p>
